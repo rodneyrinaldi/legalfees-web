@@ -62,12 +62,10 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  height: 100px;
   width: 60%;
   margin: 0 auto;
   padding: 10px 20px;
   font-size: 0.7em;
-  font-weight: 400;
   border: 1px solid rgba(234, 232, 234, 0.2);
 }
 .placeholdercard:hover {
@@ -80,21 +78,25 @@
 }
 .placeholdercard h2 {
   line-height: 20px;
+  font-weight: 300;
   margin: 0;
   padding: 0;
 }
 .placeholdercard h3 {
   line-height: 20px;
+  font-weight: 300;
   margin: 0;
   padding: 0;
 }
 .placeholdercard h4 {
   line-height: 20px;
+  font-weight: 600;
   margin: 0;
   padding: 0;
 }
 .placeholdercard p {
-  line-height: 20px;
+  line-height: 16px;
+  font-weight: 200;
   margin: 0;
   padding: 0;
 }

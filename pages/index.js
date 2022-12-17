@@ -29,7 +29,7 @@ export default function Legalfees({ legalfees }) {
             <p>{legalfees.Atividade}</p>
             <p>{legalfees.Classe}</p>
             <p>{legalfees.Subclasse}</p>
-            <p>{legalfees.Valor}</p>
+            {legalfees.Valor ? <h4>{legalfees.Valor}</h4> : null}
           </div>
         ))}
       </div>
