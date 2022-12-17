@@ -26,9 +26,9 @@ export default function Legalfees({ legalfees }) {
 
         {legalfees.map((legalfees) => (
           <div className={styles.placeholdercard}>
-            <p>{legalfees.Atividade}</p>
-            <p>{legalfees.Classe}</p>
+            <h4>{legalfees.Classe}</h4>
             <p>{legalfees.Subclasse}</p>
+            <p>{legalfees.Atividade}</p>
             {legalfees.Valor ? <h4>{legalfees.Valor}</h4> : null}
           </div>
         ))}
