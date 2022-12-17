@@ -1,13 +1,16 @@
-.header {
+.stickycontent {
+  position: sticky;
+  top: 0;
+  height: 200px;
+  z-index: 10;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 15px;
-  height: 20vh;
-  width: 900px;
-  margin: 0 auto;
+  gap: 20px;
+  background-color: #301934;
+  padding: 3rem 20px;
 }
-.header h1 {
+.stickycontent h1 {
   text-align: center;
   font-size: 22px;
   font-weight: 500;
@@ -15,10 +18,11 @@
   text-shadow: 0px 0px 5px #b393d3, 0px 0px 10px #b393d3, 0px 0px 10px #b393d3,
     0px 0px 20px #b393d3;
 }
-.header input {
+.stickycontent input {
   width: 500px;
-  height: 30px;
+  height: 40px;
   margin: 0 auto;
+  padding: 5px 15px;
   text-align: center;
   font-size: 16px;
   font-weight: 500;
@@ -27,41 +31,50 @@
   border-radius: 25px;
 }
 
-.main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 15px;
-  height: 70vh;
-  width: 900px;
+.stickycontentimage {
+  width: 26px;
+  height: 26px;
   margin: 0 auto;
-  font-size: 0.7em;
-  font-weight: 400;
+  padding-bottom: 50px;
 }
 
-.card {
+.stickycontenttitle {
+  margin: 0;
+}
+
+.placeholdercontent {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%;
+  gap: 30px;
+  min-height: 1000px;
+}
+
+.placeholdertitle {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-left: 20px;
+}
+
+.placeholdercard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100px;
   width: 60%;
   margin: 0 auto;
+  padding: 10px 20px;
   font-size: 0.7em;
   font-weight: 400;
-
-  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3),
-    0 0 40px rgba(0, 0, 0, 0.1) inset;
-  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3),
-    0 0 40px rgba(0, 0, 0, 0.1) inset;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  border: 1px solid rgba(234, 232, 234, 0.2);
 }
-
-.footer {
-  display: flex;
-  justify-content: center;
-  height: 10vh;
-  width: 900px;
-  margin: 0 auto;
+.placeholdercard:hover {
+  -webkit-box-shadow: 0 1px 4px rgba(234, 232, 234, 0.3),
+    0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow: 0 1px 4px rgba(234, 232, 234, 0.5),
+    0 0 40px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0 1px 4px rgba(234, 232, 234, 0.5),
+    0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
 
 @media (max-width: 600px) {
@@ -81,41 +94,4 @@
   .card {
     width: 100%;
   }
-
-  .footer {
-    width: 86vw;
-  }
-}
-
-.effect6 {
-  position: relative;
-  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3),
-    0 0 40px rgba(0, 0, 0, 0.1) inset;
-  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3),
-    0 0 40px rgba(0, 0, 0, 0.1) inset;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-}
-.effect6:before,
-.effect6:after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
-  -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
-  top: 50%;
-  bottom: 0;
-  left: 10px;
-  right: 10px;
-  -moz-border-radius: 100px / 10px;
-  border-radius: 100px / 10px;
-}
-.effect6:after {
-  right: 10px;
-  left: auto;
-  -webkit-transform: skew(8deg) rotate(3deg);
-  -moz-transform: skew(8deg) rotate(3deg);
-  -ms-transform: skew(8deg) rotate(3deg);
-  -o-transform: skew(8deg) rotate(3deg);
-  transform: skew(8deg) rotate(3deg);
 }

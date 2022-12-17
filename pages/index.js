@@ -5,16 +5,26 @@ import styles from "../styles/index.module.css";
 export default function LegalFees() {
   return (
     <>
-      <div className={styles.header}>
-        <h1>
-          Tabela de honorários advocatícios <span>2022</span>
-        </h1>
-        <input type="text" placeholder="argumento de busca" />
-      </div>
+      <div className={styles.placeholdercontent}>
+        <section className={styles.stickycontent}>
+          <section className={styles.stickycontentimage}>
+            <Link href="http://dev.rodneyrinaldi.com">
+              <Image
+                src="/rr-logo-w.png"
+                alt="rr logo"
+                width={40}
+                height={40}
+              />
+            </Link>
+          </section>
+          <h1 className={styles.stickycontenttitle}>
+            Tabela de honorários advocatícios <span>2022</span>
+          </h1>
+          <input type="text" placeholder="argumento de busca" />
+        </section>
 
-      <div className={styles.main}>
         <a href="">
-          <div className={styles.card}>
+          <div className={styles.placeholdercard}>
             <h2>Classe</h2>
             <h3>Subclasse</h3>
             <h4>Materia</h4>
@@ -24,7 +34,7 @@ export default function LegalFees() {
           </div>
         </a>
         <a href="">
-          <div className={styles.card}>
+          <div className={styles.placeholdercard}>
             <h2>Classe</h2>
             <h3>Subclasse</h3>
             <h4>Materia</h4>
@@ -34,7 +44,7 @@ export default function LegalFees() {
           </div>
         </a>
         <a href="">
-          <div className={styles.card}>
+          <div className={styles.placeholdercard}>
             <h2>Classe</h2>
             <h3>Subclasse</h3>
             <h4>Materia</h4>
@@ -43,17 +53,76 @@ export default function LegalFees() {
             </p>
           </div>
         </a>
-      </div>
-
-      <div className={styles.footer}>
-        <Link href="http://dev.rodneyrinaldi.com">
-          <Image
-            src="/adv.svg"
-            width="40"
-            height="40"
-            alt="adv.rodneyrinaldi.com"
-          />
-        </Link>
+        <a href="">
+          <div className={styles.placeholdercard}>
+            <h2>Classe</h2>
+            <h3>Subclasse</h3>
+            <h4>Materia</h4>
+            <p>
+              Valor <span>Porcentagem</span>
+            </p>
+          </div>
+        </a>
+        <a href="">
+          <div className={styles.placeholdercard}>
+            <h2>Classe</h2>
+            <h3>Subclasse</h3>
+            <h4>Materia</h4>
+            <p>
+              Valor <span>Porcentagem</span>
+            </p>
+          </div>
+        </a>
+        <a href="">
+          <div className={styles.placeholdercard}>
+            <h2>Classe</h2>
+            <h3>Subclasse</h3>
+            <h4>Materia</h4>
+            <p>
+              Valor <span>Porcentagem</span>
+            </p>
+          </div>
+        </a>
+        <a href="">
+          <div className={styles.placeholdercard}>
+            <h2>Classe</h2>
+            <h3>Subclasse</h3>
+            <h4>Materia</h4>
+            <p>
+              Valor <span>Porcentagem</span>
+            </p>
+          </div>
+        </a>
+        <a href="">
+          <div className={styles.placeholdercard}>
+            <h2>Classe</h2>
+            <h3>Subclasse</h3>
+            <h4>Materia</h4>
+            <p>
+              Valor <span>Porcentagem</span>
+            </p>
+          </div>
+        </a>
+        <a href="">
+          <div className={styles.placeholdercard}>
+            <h2>Classe</h2>
+            <h3>Subclasse</h3>
+            <h4>Materia</h4>
+            <p>
+              Valor <span>Porcentagem</span>
+            </p>
+          </div>
+        </a>
+        <a href="">
+          <div className={styles.placeholdercard}>
+            <h2>Classe</h2>
+            <h3>Subclasse</h3>
+            <h4>Materia</h4>
+            <p>
+              Valor <span>Porcentagem</span>
+            </p>
+          </div>
+        </a>
       </div>
     </>
   );
