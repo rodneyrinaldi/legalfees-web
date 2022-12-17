@@ -2,7 +2,7 @@ import { InferGetServerSidePropsType } from 'next'
 import Head from 'next/head'
 import clientPromise from '../lib/mongodb'
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps(context: any) {
   try {
     await clientPromise
     // `await clientPromise` will use the default database passed in the MONGODB_URI
