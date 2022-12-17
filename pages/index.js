@@ -20,7 +20,7 @@ export default function LegalFees() {
           <h1 className={styles.stickycontenttitle}>
             Tabela de honorários advocatícios <span>2022</span>
           </h1>
-          <input type="text" placeholder="argumento de busca" />
+          <input type="text" placeholder="pesquisar por ..." />
         </section>
 
         <a href="">

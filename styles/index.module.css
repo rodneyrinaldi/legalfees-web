@@ -76,22 +76,42 @@
   box-shadow: 0 1px 4px rgba(234, 232, 234, 0.5),
     0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
+.placeholdercard h2 {
+  line-height: 20px;
+  margin: 0;
+  padding: 0;
+}
+.placeholdercard h3 {
+  line-height: 20px;
+  margin: 0;
+  padding: 0;
+}
+.placeholdercard h4 {
+  line-height: 20px;
+  margin: 0;
+  padding: 0;
+}
+.placeholdercard p {
+  line-height: 20px;
+  margin: 0;
+  padding: 0;
+}
 
 @media (max-width: 600px) {
-  .header {
-    width: 86vw;
+  .stickycontent {
+    width: 100%;
   }
-  .header h1 {
+  .stickycontent h1 {
   }
-  .header input {
+  .stickycontent input {
     width: 90%;
   }
 
-  .main {
-    width: 86vw;
+  .stickycontent {
+    width: 100%;
   }
 
-  .card {
-    width: 100%;
+  .placeholdercard {
+    width: 90%;
   }
 }
