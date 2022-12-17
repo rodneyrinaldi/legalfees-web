@@ -8,8 +8,8 @@ export default async (req, res) => {
     const legalfees = await db
       .collection("fees")
       .find({})
-      .sort({ metacritic: -1 })
-      .limit(10)
+      // .sort({ Atividade: -1 })
+      // .limit(10)
       .toArray();
 
     res.json(legalfees);
