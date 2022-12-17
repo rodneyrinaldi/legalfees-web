@@ -28,8 +28,8 @@ export async function getServerSideProps() {
     const legalfees = await db
       .collection("fees")
       .find({})
-      .sort({ Atividade: -1 })
-      .limit(20)
+      // .sort({ Atividade: -1 })
+      .limit(200)
       .toArray();
 
     return {
