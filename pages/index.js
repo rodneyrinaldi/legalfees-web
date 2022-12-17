@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
+import clientPromise from "../lib/mongodb";
 import styles from "../styles/index.module.css";
 
-export default function LegalFees() {
+export default function Legalfees({ legalfees }) {
   return (
     <>
       <div className={styles.placeholdercontent}>
@@ -23,107 +24,35 @@ export default function LegalFees() {
           <input type="text" placeholder="pesquisar por ..." />
         </section>
 
-        <a href="">
+        {legalfees.map((legalfees) => (
           <div className={styles.placeholdercard}>
-            <h2>Classe</h2>
-            <h3>Subclasse</h3>
-            <h4>Materia</h4>
-            <p>
-              Valor <span>Porcentagem</span>
-            </p>
+            <p>{legalfees.Atividade}</p>
+            <p>{legalfees.Classe}</p>
+            <p>{legalfees.Subclasse}</p>
+            <p>{legalfees.Valor}</p>
           </div>
-        </a>
-        <a href="">
-          <div className={styles.placeholdercard}>
-            <h2>Classe</h2>
-            <h3>Subclasse</h3>
-            <h4>Materia</h4>
-            <p>
-              Valor <span>Porcentagem</span>
-            </p>
-          </div>
-        </a>
-        <a href="">
-          <div className={styles.placeholdercard}>
-            <h2>Classe</h2>
-            <h3>Subclasse</h3>
-            <h4>Materia</h4>
-            <p>
-              Valor <span>Porcentagem</span>
-            </p>
-          </div>
-        </a>
-        <a href="">
-          <div className={styles.placeholdercard}>
-            <h2>Classe</h2>
-            <h3>Subclasse</h3>
-            <h4>Materia</h4>
-            <p>
-              Valor <span>Porcentagem</span>
-            </p>
-          </div>
-        </a>
-        <a href="">
-          <div className={styles.placeholdercard}>
-            <h2>Classe</h2>
-            <h3>Subclasse</h3>
-            <h4>Materia</h4>
-            <p>
-              Valor <span>Porcentagem</span>
-            </p>
-          </div>
-        </a>
-        <a href="">
-          <div className={styles.placeholdercard}>
-            <h2>Classe</h2>
-            <h3>Subclasse</h3>
-            <h4>Materia</h4>
-            <p>
-              Valor <span>Porcentagem</span>
-            </p>
-          </div>
-        </a>
-        <a href="">
-          <div className={styles.placeholdercard}>
-            <h2>Classe</h2>
-            <h3>Subclasse</h3>
-            <h4>Materia</h4>
-            <p>
-              Valor <span>Porcentagem</span>
-            </p>
-          </div>
-        </a>
-        <a href="">
-          <div className={styles.placeholdercard}>
-            <h2>Classe</h2>
-            <h3>Subclasse</h3>
-            <h4>Materia</h4>
-            <p>
-              Valor <span>Porcentagem</span>
-            </p>
-          </div>
-        </a>
-        <a href="">
-          <div className={styles.placeholdercard}>
-            <h2>Classe</h2>
-            <h3>Subclasse</h3>
-            <h4>Materia</h4>
-            <p>
-              Valor <span>Porcentagem</span>
-            </p>
-          </div>
-        </a>
-        <a href="">
-          <div className={styles.placeholdercard}>
-            <h2>Classe</h2>
-            <h3>Subclasse</h3>
-            <h4>Materia</h4>
-            <p>
-              Valor <span>Porcentagem</span>
-            </p>
-          </div>
-        </a>
+        ))}
       </div>
     </>
   );
+}
+
+export async function getServerSideProps() {
+  try {
+    const client = await clientPromise;
+    const db = client.db("legalfees");
+
+    const legalfees = await db
+      .collection("fees")
+      .find({})
+      // .sort({ Atividade: -1 })
+      .limit(200)
+      .toArray();
+
+    return {
+      props: { legalfees: JSON.parse(JSON.stringify(legalfees)) },
+    };
+  } catch (e) {
+    console.error(e);
+  }
 }
