@@ -12,6 +12,11 @@ export default function Legalfees({ legalfees, query }) {
   const [filter, setFilter] = useState("");
 
   useEffect(() => {
+    const pfilter = router.query["filter"];
+    router.push(`/?filter=${pfilter}`);
+  }, []);
+
+  useEffect(() => {
     router.push(`/?filter=${filter}`);
   }, [filter]);
 
@@ -27,7 +32,7 @@ export default function Legalfees({ legalfees, query }) {
       <Meta
         title="Legal Fees"
         descrition="Tabela de honorários advocatícios"
-        image="https://legalfees.rrs.net.br/card.jpg"
+        image="https://legalfees.rrs.net.br/card.png"
         url="https://legalfees.rrs.net.br/"
       />
 
@@ -68,7 +73,6 @@ export default function Legalfees({ legalfees, query }) {
 export async function getServerSideProps({ query }) {
   try {
     const filter = query.filter ? query.filter : "";
-    console.log(filter);
 
     const client = await clientPromise;
     const db = client.db("legalfees");
