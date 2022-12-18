@@ -11,7 +11,9 @@ export default function Legalfees({ legalfees, query }) {
   const router = useRouter();
   const [filter, setFilter] = useState("");
 
-  useEffect(() => {}, [filter]);
+  useEffect(() => {
+    router.push(`/?filter=${filter}`);
+  }, [filter]);
 
   return (
     <>
@@ -52,12 +54,10 @@ export default function Legalfees({ legalfees, query }) {
         </section>
         {legalfees.map((legalfees) => (
           <div className={styles.placeholdercard} key={legalfees._id}>
-            <h3 key={legalfees._id + "a"}>{legalfees.Classe}</h3>
-            <p key={legalfees._id + "b"}>{legalfees.Subclasse}</p>
-            <p key={legalfees._id + "c"}>{legalfees.Atividade}</p>
-            {legalfees.Valor ? (
-              <h2 key={legalfees._id + "d"}>{legalfees.Valor}</h2>
-            ) : null}
+            <h3>{legalfees.Classe}</h3>
+            <p>{legalfees.Subclasse}</p>
+            <p>{legalfees.Atividade}</p>
+            {legalfees.Valor ? <h2>{legalfees.Valor}</h2> : null}
           </div>
         ))}
       </div>
@@ -65,17 +65,16 @@ export default function Legalfees({ legalfees, query }) {
   );
 }
 
-export async function getServerSideProps(query) {
+export async function getServerSideProps({ query }) {
   try {
-    const filter = query ? query.filter : "";
+    const filter = query.filter ? query.filter : "";
     console.log(filter);
 
     const client = await clientPromise;
     const db = client.db("legalfees");
     const legalfees = await db
       .collection("fees")
-      .find({ Atividade: { $regex: "", $options: "i" } })
-      // .find({ Atividade: "Parecer ou memorial" })
+      .find({ Atividade: { $regex: filter, $options: "i" } })
       .limit(200)
       .toArray();
 
