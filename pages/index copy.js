@@ -20,11 +20,6 @@ export default function Legalfees({ legalfees, query }) {
     router.push(`/?filter=${filter}`);
   }, [filter]);
 
-  function onCliclClear() {
-    // setFilter("Consulta");
-    // document.getElementById("inputFilter").value = "";
-  }
-
   return (
     <>
       <Head>
@@ -56,22 +51,19 @@ export default function Legalfees({ legalfees, query }) {
           <h1 className={styles.stickycontenttitle}>
             Tabela de honorários advocatícios <span>2022</span>
           </h1>
-          <div className={styles.inputbox}>
+          <div>
             <input
               type="text"
-              id="inputFilter"
               placeholder="pesquisar por ..."
               onChange={(e) => setFilter(e.target.value)}
             />
-            <a href="" onClick={onCliclClear}>
-              <Image
-                src="/cancel.png"
-                alt="cancel"
-                width={20}
-                height={20}
-                className={styles.inputboxclear}
-              />
-            </a>
+            <Image
+              src="/cancel.png"
+              alt="cancel"
+              width={20}
+              height={20}
+              className={styles.clear}
+            />
           </div>
         </section>
         {legalfees.map((legalfees) => (
