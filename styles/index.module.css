@@ -106,7 +106,8 @@
   padding: 0;
 }
 .placeholdercard p {
-  line-height: 14px;
+  line-height: 16px;
+  font-size: 14px;
   font-weight: 200;
   margin: 0;
   padding: 1px 0 10px;
