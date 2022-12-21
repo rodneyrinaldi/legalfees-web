@@ -1,0 +1,51 @@
+.navbar {
+  overflow: hidden;
+  position: sticky;
+  position: -webkit-sticky;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-index: center;
+  gap: 2px;
+  padding: 0 0 40px;
+  top: 0;
+}
+.navbar a {
+  padding-top: 5px;
+  padding-left: 10px;
+  opacity: 0.6;
+}
+.navbar input {
+  width: 340px;
+  display: block;
+  text-align: center;
+  padding: 5px 10px;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 8px;
+}
+.navbar a:hover {
+  opacity: 1;
+}
+.navbar a.active {
+  color: white;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 14px;
+}
+
+@media screen and (max-width: 700px) {
+}
+
+@media screen and (max-width: 400px) {
+  .navbar a {
+  }
+  .navbar input {
+    width: 250px;
+  }
+}

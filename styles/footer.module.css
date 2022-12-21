@@ -1,0 +1,32 @@
+.container {
+  padding: 20px;
+  text-align: center;
+}
+.container h2 {
+  padding: 20px 0 14px;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 300;
+  color: #fff;
+}
+.container p {
+  padding: 0 0 2px;
+  margin: 0;
+  font-size: 12px;
+  font-weight: 50;
+  color: #fff;
+}
+.container a {
+  font-size: 14px;
+  font-weight: 50;
+  color: #fff;
+}
+.container a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 700px) {
+}
+
+@media screen and (max-width: 400px) {
+}
