@@ -5,12 +5,7 @@ export default async (req, res) => {
     const client = await clientPromise;
     const db = client.db("legalfees");
 
-    const legalfees = await db
-      .collection("fees")
-      .find({})
-      // .sort({ Atividade: -1 })
-      // .limit(10)
-      .toArray();
+    const legalfees = await db.collection("fees").find({}).toArray();
 
     res.json(legalfees);
   } catch (e) {

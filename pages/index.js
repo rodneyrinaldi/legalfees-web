@@ -65,6 +65,12 @@ export default function Home({ legalfees, query }) {
       </div>
 
       <div className={styles.cards}>
+        <p>
+          endereço da api para acesso sistêmico{": "}
+          <a href="https://legalfees.rrs.net.br/api/fees" target="_blank">
+            clique aqui
+          </a>
+        </p>
         {legalfees.map((legalfees) => (
           <Card legalfees={legalfees} key={legalfees._id} />
         ))}

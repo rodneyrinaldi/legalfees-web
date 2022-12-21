@@ -20,7 +20,7 @@ function Header() {
       </Head>
       <div className={styles.container}>
         <h1>legalfees</h1>
-        <p>Tabela de honorários advocatícios</p>
+        <p>Honorários Advocatícios 2022</p>
       </div>
     </>
   );

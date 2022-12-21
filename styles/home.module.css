@@ -13,7 +13,7 @@
   opacity: 0.6;
 }
 .navbar input {
-  width: 340px;
+  width: 400px;
   display: block;
   text-align: center;
   padding: 5px 10px;
@@ -34,6 +34,7 @@
   justify-content: center;
   align-index: center;
   gap: 2px;
+  padding: 10px 0;
   width: 100%;
   background-color: "#301934";
 }
@@ -44,6 +45,7 @@
   justify-content: center;
   align-index: center;
   gap: 2px;
+  padding: 10px 0;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.6);
 }
@@ -54,7 +56,21 @@
   justify-content: center;
   text-align: center;
   gap: 14px;
-  padding: 40px 0 0;
+  padding: 0px 0 0;
+}
+.cards p {
+  margin: 0;
+  padding: 0 0 10px;
+  font-size: 12px;
+  font-weight: 50;
+}
+.cards p a {
+  padding: 0 0 10px;
+  font-size: 12px;
+  font-weight: 50;
+}
+.cards p a:hover {
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 700px) {
