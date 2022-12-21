@@ -11,8 +11,8 @@ function Footer() {
         <Image
           src="/rr-logo-w.png"
           alt="confirm"
-          width={24}
-          height={24}
+          width={28}
+          height={28}
           className={styles.inputboxconfirm}
         />
       </a>
