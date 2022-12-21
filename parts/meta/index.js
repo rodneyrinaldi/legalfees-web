@@ -1,10 +1,10 @@
 import Head from "next/head";
 
 const defaults = {
-  title: `Legalfees`,
-  description: `Tabela de honorários OAB`,
-  image: `http://legalfees.rrs.net.br/card.png`,
-  url: `http://legalfees.rrs.net.br`,
+  title: ``,
+  description: ``,
+  image: ``,
+  url: ``,
 };
 
 const Meta = (props) => (
