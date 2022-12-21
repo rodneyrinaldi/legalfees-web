@@ -3,7 +3,7 @@ import Head from "next/head";
 const defaults = {
   title: `Legalfees`,
   description: `Tabela de honorários OAB`,
-  image: `http://legalfees.rrs.net.br/card.jpg`,
+  image: `http://legalfees.rrs.net.br/card.png`,
   url: `http://legalfees.rrs.net.br`,
 };
 
