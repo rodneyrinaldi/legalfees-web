@@ -7,7 +7,11 @@ function Card({ legalfees }) {
       <h3>{legalfees.Classe}</h3>
       <p>{legalfees.Subclasse}</p>
       <p>{legalfees.Atividade}</p>
-      {legalfees.Valor ? <h2>{legalfees.Valor}</h2> : null}
+      {legalfees.Valor ? (
+        <h2>
+          {legalfees.Valor} <span>( {legalfees.Porc} )</span>
+        </h2>
+      ) : null}
     </div>
   );
 }

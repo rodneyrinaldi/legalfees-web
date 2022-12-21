@@ -108,6 +108,7 @@ export async function getServerSideProps({ query }) {
       .find({
         Atividade: { $regex: filter, $options: "i" },
       })
+      .sort({ ID: -1 })
       .limit(200)
       .toArray();
 
