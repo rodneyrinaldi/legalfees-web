@@ -30,9 +30,15 @@ export default function Home({ legalfees, query }) {
     document.getElementById("inputFilter").value = "";
     router.push(`/?filter=${"Consulta"}`);
   }
+
   function onClickConfirm(event) {
     event.preventDefault();
     router.push(`/?filter=${filter}`);
+  }
+
+  function onKeyConfirm(event) {
+    console.log(event.keyCode);
+    if (event.key == "Enter") router.push(`/?filter=${filter}`);
   }
 
   return (
@@ -47,6 +53,7 @@ export default function Home({ legalfees, query }) {
             id="inputFilter"
             placeholder="pesquisar por ..."
             onChange={(e) => setFilter(e.target.value)}
+            onKeyPress={(e) => onKeyConfirm(e)}
           />
           <a href="" onClick={(e) => onClickConfirm(e)}>
             <Image src="/confirm.png" alt="confirm" width={22} height={22} />
