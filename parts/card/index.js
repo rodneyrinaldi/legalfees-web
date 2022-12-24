@@ -4,7 +4,10 @@ import styles from "../../styles/card.module.css";
 function Card({ legalfees }) {
   return (
     <div className={styles.container} key={legalfees._id}>
-      <h3>{legalfees.Classe}</h3>
+      <h3>
+        <span>{legalfees.Codigo} </span>
+        {legalfees.Classe}
+      </h3>
       <p>{legalfees.Subclasse}</p>
       <p>{legalfees.Atividade}</p>
       {legalfees.Valor ? (

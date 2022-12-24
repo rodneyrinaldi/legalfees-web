@@ -19,11 +19,46 @@
   font-weight: 500;
 }
 
+.menu {
+  position: fixed;
+  zorder: 100;
+  top: 30px;
+  right: 21%;
+  opacity: 0.6;
+}
+.menu:hover {
+  opacity: 1;
+}
+
+.popup {
+  border: none;
+  position: relative;
+  color: #c0bac2;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 15px 5px;
+  border-radius: 8px;
+}
+
+.xxx {
+}
+
 @media screen and (max-width: 700px) {
 }
 
 @media screen and (max-width: 400px) {
   .container p {
     font-size: 14px;
+  }
+
+  .menu {
+    top: 20px;
+    right: 5%;
   }
 }

@@ -38,7 +38,6 @@ export default function Home({ legalfees, query }) {
   }
 
   function onKeyConfirm(event) {
-    console.log(event.keyCode);
     if (event.key == "Enter") router.push(`/?filter=${filter}`);
   }
 
@@ -73,12 +72,6 @@ export default function Home({ legalfees, query }) {
       </div>
 
       <div className={styles.cards}>
-        <p>
-          endereço da api para acesso sistêmico{": "}
-          <a href="https://legalfees.rrs.net.br/api/fees" target="_blank">
-            clique aqui
-          </a>
-        </p>
         {legalfees.map((legalfees) => (
           <Card legalfees={legalfees} key={legalfees._id} />
         ))}
@@ -105,10 +98,17 @@ export async function getServerSideProps({ query }) {
     const db = client.db("legalfees");
     const legalfees = await db
       .collection("fees")
+      // .find({
+      //   Atividade: { $regex: filter, $options: "i" },
+      // })
       .find({
-        Atividade: { $regex: filter, $options: "i" },
+        $or: [
+          { Atividade: { $regex: filter, $options: "i" } },
+          { Classe: { $regex: filter, $options: "i" } },
+          { Subclasse: { $regex: filter, $options: "i" } },
+        ],
       })
-      .sort({ ID: -1 })
+      .sort({ ID: 1 })
       .limit(200)
       .toArray();
 
