@@ -21,9 +21,9 @@ export default function HomeRJ({ legalfees, query }) {
 
       <div className={styles.cards}>
         <h2>
-          Sob negociação{" "}
+          Estado do Rio de Janeiro{" "}
           <span>
-            <p>Em breve novidades</p>
+            <p>Em negociação, breve novidades...</p>
           </span>
         </h2>
       </div>
