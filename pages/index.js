@@ -9,9 +9,10 @@ import Meta from "../parts/meta";
 
 import styles from "../styles/home.module.css";
 
-export default function Home({ legalfees, query }) {
+export default function Home({ legalfees, pageProps }) {
   const router = useRouter();
   const [filter, setFilter] = useState("Consulta");
+  const [isLoading, setIsLoading] = useState(true);
   const [isDark, setIsDark] = useState(false);
 
   const listenScrollEvent = (e) => {
@@ -53,7 +54,6 @@ export default function Home({ legalfees, query }) {
       />
 
       <div className={styles.navbar}>
-        {console.log(isDark)}
         <div className={isDark ? styles.navbarcolordark : styles.navbarcolor}>
           <input
             type="text"
@@ -70,7 +70,6 @@ export default function Home({ legalfees, query }) {
           </a>
         </div>
       </div>
-
       <div className={styles.cards}>
         {legalfees.map((legalfees) => (
           <Card legalfees={legalfees} key={legalfees._id} />

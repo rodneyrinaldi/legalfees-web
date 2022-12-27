@@ -41,7 +41,7 @@ function Header() {
         <div className={styles.popup}>
           <a href="https://legalfees.rrs.net.br/api/fees" target="_blank">
             <Image
-              src="/api.png"
+              src="/flagapi.png"
               alt="URL API"
               width={52}
               height={52}
@@ -50,7 +50,7 @@ function Header() {
           </a>
           <a href="/ufrj">
             <Image
-              src="/uf-rj.png"
+              src="/flagrj.png"
               alt="Rio de Janeiro"
               width={52}
               height={52}
@@ -59,7 +59,7 @@ function Header() {
           </a>
           <a href="/">
             <Image
-              src="/uf-sp.png"
+              src="/flagsp.png"
               alt="São Paulo"
               width={52}
               height={52}
