@@ -20,28 +20,30 @@
   box-shadow: 0 1px 4px rgba(234, 232, 234, 0.5),
     0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
-.container h2 {
-  line-height: 20px;
+.container a h2 {
+  line-height: 24px;
+  font-size: 1.6em;
   font-weight: 600;
   margin: 0;
   padding: 0;
 }
-.container h3 {
-  line-height: 16px;
+.container a h3 {
+  line-height: 18px;
+  font-size: 1.2em;
   font-weight: 400;
   margin: 0;
   padding: 0;
 }
-.container p {
-  line-height: 16px;
-  font-size: 14px;
+.container a p {
+  line-height: 18px;
+  font-size: 1.3em;
   font-weight: 200;
   margin: 0;
   padding: 1px 0 10px;
 }
 
 .containerFlyer {
-  color: #301934;
+  color: #402145;
   background-color: #c0bac2;
   display: flex;
   flex-direction: column;
@@ -49,24 +51,47 @@
   text-align: center;
   width: 60%;
   margin: 0 auto;
-  padding: 15px 5px;
+  padding: 30px 10px;
   font-size: 0.7em;
-  border: 1px solid rgba(234, 232, 234, 0.2);
   border-radius: 8px;
 }
-
-.popup {
-  margin: 70px auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 5px;
-  width: 30%;
-  position: relative;
-  transition: all 5s ease-in-out;
+.containerFlyer:hover {
+  color: #100812;
+  -webkit-box-shadow: 0 1px 4px rgba(234, 232, 234, 0.5),
+    0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow: 0 1px 4px rgba(234, 232, 234, 0.7),
+    0 0 40px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0 1px 4px rgba(234, 232, 234, 0.7),
+    0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.containerFlyer a h2 {
+  line-height: 24px;
+  font-size: 1.8em;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+}
+.containerFlyer a h3 {
+  line-height: 18px;
+  font-size: 1.3em;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+.containerFlyer a p {
+  line-height: 18px;
+  font-size: 1.5em;
+  font-weight: 200;
+  margin: 0;
+  padding: 1px 0 10px;
 }
 
 @media (max-width: 600px) {
   .container {
+    width: 90%;
+  }
+
+  .containerFlyer {
     width: 90%;
   }
 }
