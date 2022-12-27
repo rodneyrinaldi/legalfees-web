@@ -23,7 +23,8 @@ function Card({ legalfees }) {
         <p>{legalfees.Atividade}</p>
         {legalfees.Valor ? (
           <h2>
-            {legalfees.Valor} <span>( {legalfees.Porc} )</span>
+            {legalfees.Valor}{" "}
+            {legalfees.Porc ? <span>( {legalfees.Porc} )</span> : null}
           </h2>
         ) : null}
       </a>

@@ -14,6 +14,9 @@ function Footer() {
           <p>https://dev.rodneyrinaldi.com</p>
         </a>
       </div>
+      <p>
+        versão 0.1.0 - visitas <span>1.035</span>
+      </p>
       <Image
         src="/rr-logo-w.png"
         alt="confirm"

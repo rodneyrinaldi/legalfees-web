@@ -44,7 +44,7 @@
 
 .containerFlyer {
   color: #402145;
-  background-color: #c0bac2;
+  background-color: #d9bcde;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -81,7 +81,7 @@
 .containerFlyer a p {
   line-height: 18px;
   font-size: 1.5em;
-  font-weight: 200;
+  font-weight: 300;
   margin: 0;
   padding: 1px 0 10px;
 }
