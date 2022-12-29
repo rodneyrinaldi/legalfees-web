@@ -1,4 +1,5 @@
 import Image from "next/image";
+import PViews from "../pviews";
 
 import styles from "../../styles/footer.module.css";
 
@@ -15,7 +16,10 @@ function Footer() {
         </a>
       </div>
       <p>
-        versão 0.1.0 - visitas <span>1.035</span>
+        versão 0.1.0 - visitas{" "}
+        <span>
+          <PViews />
+        </span>
       </p>
       <Image
         src="/rr-logo-w.png"

@@ -97,18 +97,17 @@ export async function getServerSideProps({ query }) {
     const db = client.db("legalfees");
     const legalfees = await db
       .collection("fees")
-      // .find({
-      //   Atividade: { $regex: filter, $options: "i" },
-      // })
       .find({
         $or: [
-          { Atividade: { $regex: filter, $options: "i" } },
-          { Classe: { $regex: filter, $options: "i" } },
-          { Subclasse: { $regex: filter, $options: "i" } },
+          { codigo: { $regex: filter, $options: "i" } },
+          { materia: { $regex: filter, $options: "i" } },
+          { classe: { $regex: filter, $options: "i" } },
+          { subclasse: { $regex: filter, $options: "i" } },
+          { atividade: { $regex: filter, $options: "i" } },
         ],
       })
-      .sort({ ID: 1 })
-      .limit(200)
+      .sort({ sequencial: 1 })
+      .limit(100)
       .toArray();
 
     return {

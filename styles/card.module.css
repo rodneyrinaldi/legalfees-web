@@ -41,6 +41,18 @@
   margin: 0;
   padding: 1px 0 10px;
 }
+.container div {
+  display: none;
+}
+/* .container div {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  text-align: right;
+  width: 60%;
+  margin: 0;
+  padding: 0;
+} */
 
 .containerFlyer {
   color: #402145;
@@ -51,7 +63,7 @@
   text-align: center;
   width: 60%;
   margin: 0 auto;
-  padding: 30px 10px;
+  padding: 30px 10px 20px;
   font-size: 0.7em;
   border-radius: 8px;
 }
@@ -84,6 +96,9 @@
   font-weight: 300;
   margin: 0;
   padding: 1px 0 10px;
+}
+.containerFlyer div {
+  padding-top: 10px;
 }
 
 @media (max-width: 600px) {

@@ -1,3 +1,5 @@
+import copy from "copy-to-clipboard";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 import styles from "../../styles/card.module.css";
@@ -12,22 +14,49 @@ function Card({ legalfees }) {
     setIsOpened(!isOpened);
   }
 
+  async function handleCopy(e) {
+    const texttocopy =
+      legalfees.codigo +
+      " " +
+      legalfees.atividade +
+      " " +
+      legalfees.valor +
+      " " +
+      legalfees.porcentagem +
+      " " +
+      legalfees.materia +
+      " " +
+      legalfees.classe +
+      " " +
+      legalfees.tipo;
+    e.preventDefault();
+    copy(texttocopy, {
+      debug: false,
+      message: "Pressione #{tecla} para copiar",
+    });
+  }
+
   return (
     <div className={isOpened ? styles.containerFlyer : styles.container}>
       <a href="" onClick={(e) => handleClick(e)}>
         <h3>
-          <span>{legalfees.Codigo} </span>
-          {legalfees.Classe}
+          <span>{legalfees.codigo} </span>
+          {legalfees.classe}
         </h3>
-        <p>{legalfees.Subclasse}</p>
-        <p>{legalfees.Atividade}</p>
-        {legalfees.Valor ? (
+        <p>{legalfees.subclasse}</p>
+        <p>{legalfees.atividade}</p>
+        {legalfees.valor ? (
           <h2>
-            {legalfees.Valor}{" "}
-            {legalfees.Porc ? <span>( {legalfees.Porc} )</span> : null}
+            {legalfees.valor}{" "}
+            {legalfees.porc ? <span>( {legalfees.porc} )</span> : null}
           </h2>
         ) : null}
       </a>
+      <div>
+        <a href="" onClick={(e) => handleCopy(e)}>
+          <Image src="/copy.png" alt="confirm" width={22} height={22} />
+        </a>
+      </div>
     </div>
   );
 }
