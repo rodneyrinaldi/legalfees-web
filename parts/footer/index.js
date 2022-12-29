@@ -7,7 +7,11 @@ import styles from "../../styles/footer.module.css";
 function Footer() {
   const router = useRouter();
   const wapp =
-    "https://api.whatsapp.com/send?phone=+551131646843&text=Olá, como posso ajudar?   (Legal fees) A tecnologia e o direito integrados são minhas áreas de atuação especializada. Consultoria, desenvolvimento e sensível a parcerias.";
+    "https://api.whatsapp.com/send?phone=" +
+    (process.env.PHONE_WA ? process.env.PHONE_WA : "+5511999999999") +
+    "&text=(Legal fees) Olá, como posso ajudar? " +
+    "A tecnologia e o direito integrados são minhas áreas de atuação especializadas. " +
+    "Disponível para consultoria e desenvolvimento, sensível a parcerias.";
 
   return (
     <div className={styles.container}>
