@@ -41,14 +41,16 @@ function Card({ legalfees }) {
       <a href="" onClick={(e) => handleClick(e)}>
         <h3>
           <span>{legalfees.codigo} </span>
-          {legalfees.classe}
+          {legalfees.materia}
         </h3>
-        <p>{legalfees.subclasse}</p>
+        <p>{legalfees.classe}</p>
         <p>{legalfees.atividade}</p>
         {legalfees.valor ? (
           <h2>
             {legalfees.valor}{" "}
-            {legalfees.porc ? <span>( {legalfees.porc} )</span> : null}
+            {legalfees.porcentagem ? (
+              <span>( {legalfees.porcentagem} )</span>
+            ) : null}
           </h2>
         ) : null}
       </a>

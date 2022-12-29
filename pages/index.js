@@ -100,10 +100,10 @@ export async function getServerSideProps({ query }) {
       .find({
         $or: [
           { codigo: { $regex: filter, $options: "i" } },
+          { atividade: { $regex: filter, $options: "i" } },
           { materia: { $regex: filter, $options: "i" } },
           { classe: { $regex: filter, $options: "i" } },
-          { subclasse: { $regex: filter, $options: "i" } },
-          { atividade: { $regex: filter, $options: "i" } },
+          { tipo: { $regex: filter, $options: "i" } },
         ],
       })
       .sort({ sequencial: 1 })
