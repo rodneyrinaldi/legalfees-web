@@ -9,7 +9,7 @@ import Meta from "../parts/meta";
 
 import styles from "../styles/home.module.css";
 
-export default function Home({ legalfees, pageProps }) {
+export default function Home({ pfees, pviews, pageProps }) {
   const router = useRouter();
   const [filter, setFilter] = useState("Consulta");
   const [isLoading, setIsLoading] = useState(true);
@@ -71,12 +71,12 @@ export default function Home({ legalfees, pageProps }) {
         </div>
       </div>
       <div className={styles.cards}>
-        {legalfees.map((legalfees) => (
-          <Card legalfees={legalfees} key={legalfees._id} />
+        {pfees.map((pfees) => (
+          <Card legalfees={pfees} key={pfees._id} />
         ))}
       </div>
 
-      <Footer />
+      <Footer visits={pviews[0].visits.toLocaleString("pt-BR")} />
     </>
   );
 }
@@ -95,7 +95,7 @@ export async function getServerSideProps({ query }) {
 
     const client = await clientPromise;
     const db = client.db("legalfees");
-    const legalfees = await db
+    const pfees = await db
       .collection("fees")
       .find({
         $or: [
@@ -109,9 +109,13 @@ export async function getServerSideProps({ query }) {
       .sort({ sequencial: 1 })
       .limit(100)
       .toArray();
+    const pviews = await db.collection("views").find({}).toArray();
 
     return {
-      props: { legalfees: JSON.parse(JSON.stringify(legalfees)) },
+      props: {
+        pfees: JSON.parse(JSON.stringify(pfees)),
+        pviews: JSON.parse(JSON.stringify(pviews)),
+      },
     };
   } catch (e) {}
 }

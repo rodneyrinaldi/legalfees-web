@@ -4,14 +4,14 @@ import PViews from "../pviews";
 
 import styles from "../../styles/footer.module.css";
 
-function Footer() {
+function Footer({ visits }) {
   const router = useRouter();
   const wapp =
     "https://api.whatsapp.com/send?phone=" +
     (process.env.PHONE_WA ? process.env.PHONE_WA : "+5511999999999") +
-    "&text=(Legal fees) Olá, como posso ajudar? " +
-    "A tecnologia e o direito integrados são minhas áreas de atuação especializadas. " +
-    "Disponível para consultoria e desenvolvimento, sensível a parcerias.";
+    "&text=Olá Rodney, Legalfees. " +
+    "Interessante a iniciativa, apreciaria um contato. " +
+    "Poderíamos conversar sobre? Obrigado.";
 
   return (
     <div className={styles.container}>
@@ -27,7 +27,7 @@ function Footer() {
       <p>
         versão 0.1.0 - visitas{" "}
         <span>
-          <PViews />
+          <PViews visits={visits} />
         </span>
       </p>
       <a href="http://rodneyrinaldi.com" target="_blank" rel="noreferrer">
