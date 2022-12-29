@@ -24,16 +24,16 @@
 
 <p align="center">
   <a href="#">
-    <img alt="page 1" src="https://github.com/rodneyrinaldi/legalfees-web/blob/main/public/page1.jpg" width="60" />
+    <img alt="page 1" src="https://github.com/rodneyrinaldi/legalfees-web/blob/main/public/page1.jpg" width="240" />
   </a>
   <a href="#">
-    <img alt="page 2" src="https://github.com/rodneyrinaldi/legalfees-web/blob/main/public/page2.jpg" width="60" />
+    <img alt="page 2" src="https://github.com/rodneyrinaldi/legalfees-web/blob/main/public/page2.jpg" width="240" />
   </a>
   <a href="#">
-    <img alt="page 3" src="https://github.com/rodneyrinaldi/legalfees-web/blob/main/public/page3.jpg" width="60" />
+    <img alt="page 3" src="https://github.com/rodneyrinaldi/legalfees-web/blob/main/public/page3.jpg" width="240" />
   </a>
   <a href="#">
-    <img alt="page 4" src="https://github.com/rodneyrinaldi/legalfees-web/blob/main/public/page4.jpg" width="60" />
+    <img alt="page 4" src="https://github.com/rodneyrinaldi/legalfees-web/blob/main/public/page4.jpg" width="240" />
   </a>
 </p>
 
