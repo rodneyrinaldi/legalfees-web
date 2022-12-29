@@ -30,7 +30,7 @@ export default function Home({ legalfees, pageProps }) {
   function onClickCancel(event) {
     event.preventDefault();
     document.getElementById("inputFilter").value = "";
-    router.push(`/?filter=${"Consulta"}`);
+    router.push(`/?filter=${"Hora intelectual"}`);
   }
 
   function onClickConfirm(event) {
@@ -90,7 +90,7 @@ export async function getServerSideProps({ query }) {
       filter.length > 0
     ) {
     } else {
-      filter = "Consulta";
+      filter = "Hora intelectual";
     }
 
     const client = await clientPromise;
