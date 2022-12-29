@@ -1,9 +1,14 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 import PViews from "../pviews";
 
 import styles from "../../styles/footer.module.css";
 
 function Footer() {
+  const router = useRouter();
+  const wapp =
+    "https://api.whatsapp.com/send?phone=+551131646843&text=Olá, como posso ajudar?   (Legal fees) A tecnologia e o direito integrados são minhas áreas de atuação especializada. Consultoria, desenvolvimento e sensível a parcerias.";
+
   return (
     <div className={styles.container}>
       <h2>https://legalfees.rrs.net.br</h2>
@@ -21,13 +26,24 @@ function Footer() {
           <PViews />
         </span>
       </p>
-      <Image
-        src="/rr-logo-w.png"
-        alt="confirm"
-        width={28}
-        height={28}
-        className={styles.inputboxconfirm}
-      />
+      <a href="http://rodneyrinaldi.com" target="_blank" rel="noreferrer">
+        <Image
+          src="/rr-logo-w.png"
+          alt="confirm"
+          width={28}
+          height={28}
+          className={styles.iconlink}
+        />
+      </a>
+      <a href={wapp} target="_blank" rel="noreferrer">
+        <Image
+          src="/whatsapp.png"
+          alt="whatsapp"
+          width={28}
+          height={28}
+          className={styles.iconlink}
+        />
+      </a>
     </div>
   );
 }
