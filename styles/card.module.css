@@ -6,7 +6,7 @@
   text-align: center;
   width: 60%;
   margin: 0 auto;
-  padding: 15px 5px;
+  padding: 20px 14px 14px;
   font-size: 0.7em;
   border: 1px solid rgba(234, 232, 234, 0.2);
   border-radius: 8px;
@@ -44,15 +44,6 @@
 .container div {
   display: none;
 }
-/* .container div {
-  display: flex;
-  flex-direction: column;
-  justify-content: right;
-  text-align: right;
-  width: 60%;
-  margin: 0;
-  padding: 0;
-} */
 
 .containerFlyer {
   color: #402145;
@@ -63,7 +54,7 @@
   text-align: center;
   width: 60%;
   margin: 0 auto;
-  padding: 30px 10px 20px;
+  padding: 30px 16px 20px;
   font-size: 0.7em;
   border-radius: 8px;
 }
