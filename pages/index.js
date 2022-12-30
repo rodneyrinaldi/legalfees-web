@@ -82,6 +82,20 @@ export default function Home({ pfees, pviews, pageProps }) {
 }
 
 export async function getServerSideProps({ query }) {
+  function sensitiveRegex(string = "") {
+    return string
+      .replace(/a/g, "[a,á,à,ä,â]")
+      .replace(/A/g, "[A,a,á,à,ä,â]")
+      .replace(/e/g, "[e,é,ë,è]")
+      .replace(/E/g, "[E,e,é,ë,è]")
+      .replace(/i/g, "[i,í,ï,ì]")
+      .replace(/I/g, "[I,i,í,ï,ì]")
+      .replace(/o/g, "[o,ó,ö,ò]")
+      .replace(/O/g, "[O,o,ó,ö,ò]")
+      .replace(/u/g, "[u,ü,ú,ù]")
+      .replace(/U/g, "[U,u,ü,ú,ù]");
+  }
+
   try {
     let { filter } = query;
     if (
@@ -97,15 +111,17 @@ export async function getServerSideProps({ query }) {
     const db = client.db("legalfees");
     const pfees = await db
       .collection("fees")
+      // .find({ atividade: { $regex: sensitiveRegex(filter), $options: "i" } })
       .find({
         $or: [
-          { codigo: { $regex: filter, $options: "i" } },
-          { atividade: { $regex: filter, $options: "i" } },
-          { materia: { $regex: filter, $options: "i" } },
-          { classe: { $regex: filter, $options: "i" } },
-          { tipo: { $regex: filter, $options: "i" } },
+          { codigo: { $regex: sensitiveRegex(filter), $options: "si" } },
+          { atividade: { $regex: sensitiveRegex(filter), $options: "si" } },
+          { materia: { $regex: sensitiveRegex(filter), $options: "si" } },
+          { classe: { $regex: sensitiveRegex(filter), $options: "si" } },
+          { tipo: { $regex: sensitiveRegex(filter), $options: "si" } },
         ],
       })
+      .collation({ locale: "pt", strength: 1 })
       .sort({ sequencial: 1 })
       .limit(100)
       .toArray();
