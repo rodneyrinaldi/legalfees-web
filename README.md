@@ -51,9 +51,9 @@
 <h2 align="center">Authorship</h2>
 
 <div align="center">
-  - [dev.rodneyrinaldi.com](https://dev.rodneyrinaldi.com)
-  - GitHub [@rodneyrinaldi](https://github.com/rodneyrinaldi)
-  - Twitter [@rodneyrinaldi](https://twitter.com/rodneyrinaldi)
+  - Dev https://dev.rodneyrinaldi.com
+  - GitHub https://github.com/rodneyrinaldi
+  - Twitter https://twitter.com/rodneyrinaldi
 </div>
 
 <br />
