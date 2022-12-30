@@ -1,10 +1,12 @@
 <!-- START -->
 
 <p align="center">
-  [![rodneyrinaldi](https://github.com/rodneyrinaldi/legalfees-web/blob/main/public/rr-logo-w.png)](https://dev.rodneyrinaldi.com)
+    <img alt="rodneyrinaldi" src="https://github.com/rodneyrinaldi/legalfees-web/blob/main/public/rr-logo-w.png" width="82" />
 </p>
+<p align="center">legalfees</p>
+<p align="center">https://dev.rodneyrinaldi.com</p>
 
-<h1 align="center">Next.js - MongoDB</h1>
+<h4 align="center">Next.js - MongoDB</h4>
 
 <br />
 
