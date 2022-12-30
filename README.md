@@ -1,18 +1,23 @@
 <!-- START -->
 
 <p align="center">
-  <a href="#">
-    <img alt="rodneyrinaldi" src="https://github.com/rodneyrinaldi/legalfees-web/blob/main/public/rr-logo-w.png" width="60" />
-  </a>
+  [![rodneyrinaldi](https://github.com/rodneyrinaldi/legalfees-web/blob/main/public/rr-logo-w.png)](https://dev.rodneyrinaldi.com)
 </p>
 
-<h3 align="center">
-  Data scraping project from the fee table on the oab website
-</h3>
-
-<h4 align="center">OAB is the equivalent of a Bar Association or Bar Council in English-speaking countries</h5>
+<h1 align="center">Next.js - MongoDB</h1>
 
 <br />
+
+<h2 align="center">Features</h2>
+
+<div align="center">
+  - Data scraping project from the fee table on the oab website.
+  - Make available, in an easy way, the amounts of attorney fees based on the table of the Brazilian Bar Association.
+</div>
+
+<br />
+
+<h2 align="center">Card</h2>
 
 <p align="center">
   <a href="#">
@@ -22,7 +27,9 @@
 
 <br />
 
-<p align="center">
+<h2 align="center">Pages</h2>
+
+<p align="center"">
   <a href="#">
     <img alt="page 1" src="https://github.com/rodneyrinaldi/legalfees-web/blob/main/public/page1.jpg" width="180" />
   </a>
@@ -39,12 +46,20 @@
 
 <br />
 
-> [dev.rodneyrinaldi.com](https://dev.rodneyrinaldi.com) &nbsp;&middot;&nbsp;
-> GitHub [@rodneyrinaldi](https://github.com/rodneyrinaldi) &nbsp;&middot;&nbsp;
-> Twitter [@rodneyrinaldi](https://twitter.com/rodneyrinaldi)
+<h2 align="center">Authorship</h2>
 
-### License
+<div align="center">
+  - [dev.rodneyrinaldi.com](https://dev.rodneyrinaldi.com)
+  - GitHub [@rodneyrinaldi](https://github.com/rodneyrinaldi)
+  - Twitter [@rodneyrinaldi](https://twitter.com/rodneyrinaldi)
+</div>
 
-MIT
+<br />
+
+<h2 align="center">License</h2>
+
+<div align="center">
+  MIT
+</div>
 
 <!-- END -->
