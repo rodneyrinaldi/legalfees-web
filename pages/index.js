@@ -76,7 +76,7 @@ export default function Home({ pfees, pviews, pageProps }) {
         ))}
       </div>
 
-      <Footer visits={pviews[0].vl.toLocaleString("pt-BR")} />
+      <Footer visits={pviews[0].VL.toLocaleString("pt-BR")} />
     </>
   );
 }
@@ -109,6 +109,7 @@ export async function getServerSideProps({ query }) {
 
     const client = await clientPromise;
     const db = client.db("legalfees");
+
     const pfees = await db
       .collection("fees")
       .find({
@@ -126,7 +127,15 @@ export async function getServerSideProps({ query }) {
       .limit(100)
       .toArray();
 
-    const pviews = await db.collection("views").find({}).toArray();
+    const data = await db
+      .collection("views")
+      .findOneAndUpdate({ ID: "visits" }, { $inc: { VL: 1 } });
+
+    const pviews = await db
+      .collection("views")
+      .find({ ID: { $regex: "visits" } })
+      .collation({ locale: "pt", strength: 1 })
+      .toArray();
 
     return {
       props: {
