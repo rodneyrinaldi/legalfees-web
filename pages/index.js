@@ -111,7 +111,6 @@ export async function getServerSideProps({ query }) {
     const db = client.db("legalfees");
     const pfees = await db
       .collection("fees")
-      // .find({ atividade: { $regex: sensitiveRegex(filter), $options: "i" } })
       .find({
         $or: [
           { codigo: { $regex: sensitiveRegex(filter), $options: "si" } },
@@ -120,6 +119,7 @@ export async function getServerSideProps({ query }) {
           { classe: { $regex: sensitiveRegex(filter), $options: "si" } },
           { tipo: { $regex: sensitiveRegex(filter), $options: "si" } },
         ],
+        $and: [{ estado: { $regex: "SP" } }, { validade: { $regex: "2022" } }],
       })
       .collation({ locale: "pt", strength: 1 })
       .sort({ sequencial: 1 })
