@@ -4,7 +4,7 @@ import PViews from "../pviews";
 
 import styles from "../../styles/footer.module.css";
 
-function Footer({ visits }) {
+export default function Footer({ visits }) {
   const router = useRouter();
   const wapp =
     "https://api.whatsapp.com/send?phone=" +
@@ -51,5 +51,3 @@ function Footer({ visits }) {
     </div>
   );
 }
-
-export default Footer;

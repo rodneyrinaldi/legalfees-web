@@ -76,7 +76,7 @@ export default function Home({ pfees, pviews, pageProps }) {
         ))}
       </div>
 
-      <Footer visits={pviews[0].visits.toLocaleString("pt-BR")} />
+      <Footer visits={pviews[0].vl.toLocaleString("pt-BR")} />
     </>
   );
 }
@@ -125,6 +125,7 @@ export async function getServerSideProps({ query }) {
       .sort({ sequencial: 1 })
       .limit(100)
       .toArray();
+
     const pviews = await db.collection("views").find({}).toArray();
 
     return {
