@@ -1,9 +1,9 @@
 .container {
-  padding: 20px;
+  padding: 40px 0 0;
   text-align: center;
 }
 .container h2 {
-  padding: 20px 0 14px;
+  padding: 10px 0 14px;
   margin: 0;
   font-size: 18px;
   font-weight: 300;

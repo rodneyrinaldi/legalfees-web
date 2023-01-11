@@ -29,6 +29,21 @@
 
 <br />
 
+<h2 align="center">Feactures</h2>
+
+<p align="center">
+	- webs scrapin oab fees data information
+	- frontend displaying and filtering fees data information
+	- disposing api for fees data information
+	
+	#### To do
+	- [ ] scraping module for RJ state
+	- [ ] recoverable access history
+	- [ ] 
+</p>
+
+<br />
+
 <h2 align="center">Pages</h2>
 
 <p align="center"">

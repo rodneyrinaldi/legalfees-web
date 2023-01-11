@@ -15,6 +15,13 @@ export default function Footer({ visits }) {
 
   return (
     <div className={styles.container}>
+      <Image
+        src="/logo.png"
+        alt="logo"
+        width={48}
+        height={48}
+        className={styles.inputboxconfirm}
+      />
       <h2>https://legalfees.rrs.net.br</h2>
       <div className={styles.footer}>
         <a href="http://adv.rodneyrinaldi.com">
