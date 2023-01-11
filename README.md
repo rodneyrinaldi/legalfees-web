@@ -1,7 +1,7 @@
 <!-- START -->
 
 <p align="center">
-    <img alt="rodneyrinaldi" src="https://github.com/rodneyrinaldi/legalfees-web/blob/main/public/rr-logo-w.png" width="42" />
+    <img alt="rodneyrinaldi" src="https://github.com/rodneyrinaldi/legalfees-web/blob/main/public/logo.png" width="42" />
 </p>
 <p align="center">legalfees</p>
 <p align="center">https://dev.rodneyrinaldi.com</p>
