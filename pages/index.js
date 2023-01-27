@@ -120,7 +120,7 @@ export async function getServerSideProps({ query }) {
           { classe: { $regex: sensitiveRegex(filter), $options: "si" } },
           { tipo: { $regex: sensitiveRegex(filter), $options: "si" } },
         ],
-        $and: [{ estado: { $regex: "SP" } }, { validade: { $regex: "2022" } }],
+        $and: [{ estado: { $regex: "SP" } }, { validade: { $regex: "2023" } }],
       })
       .collation({ locale: "pt", strength: 1 })
       .sort({ sequencial: 1 })
